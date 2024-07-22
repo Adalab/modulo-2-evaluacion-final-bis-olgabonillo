@@ -1,3 +1,3 @@
 'use strict';
 
-import "./usuarios.js";
+import "../../src/js/usuarios.js";
