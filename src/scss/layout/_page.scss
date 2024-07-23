@@ -1,1 +1,73 @@
+.title {
+    font-size: 60px;
+    font-family: $font-main;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 
+}
+
+.profile {
+    background-color: $background-color;
+    margin: 20px 60px;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.name {
+    font-family: $font-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.city {
+    font-family: $font-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.username {
+    font-family: $font-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.save-data {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $background-color;
+    font-family: $font-main;
+    font-size: 20px;
+    display: flex;
+    align-items: right;
+    margin: 5px;
+}
+
+.recover-data {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $background-color;
+    font-family: $font-main;
+    font-size: 20px;
+    display: flex;
+    align-items: right;
+    margin: 5px;
+}
