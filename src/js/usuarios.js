@@ -31,12 +31,16 @@ function addFriend(event) {
 
   for (const user of users) {
     if (user.id === userId) {
-      user.isFriend = "True";
+      const isFriend = user.isFriend;
+      if (isFriend === "True") {
+        user.isFriend = "False";
+      } else {
+        user.isFriend = "True";
+      }
     }
   }
   listUsers.innerHTML = "";
   showUsers();
-
 }
 
 function addClassFriends() {
@@ -44,10 +48,12 @@ function addClassFriends() {
     if (user.isFriend === "True") {
       const friend = document.getElementById(`${user.id}`);
       friend.classList.add("friends");
+    } else {
+      user.isFriend === "False";
+      friend.classList.remove("friends");
     }
   }
 }
-
 function showUsers() {
   for (const user of users) {
     const liElement = document.createElement("li");
@@ -70,15 +76,14 @@ function showUsers() {
 }
 
 function saveOnLocalStorage() {
-  localStorage.setItem('users', JSON.stringify(users));
+  localStorage.setItem("users", JSON.stringify(users));
 }
 
 function recoverFromLocalStorage() {
-  users = JSON.parse(localStorage.getItem('users'));
+  users = JSON.parse(localStorage.getItem("users"));
   listUsers.innerHTML = "";
   showUsers();
 }
 
 saveDataButton.addEventListener("click", saveOnLocalStorage);
 recoverDataButton.addEventListener("click", recoverFromLocalStorage);
-
