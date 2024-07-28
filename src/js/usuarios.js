@@ -43,11 +43,10 @@ function addFriend(event) {
 
 function addClassFriends() {
   for (const user of users) {
+    const friend = document.getElementById(`${user.id}`);
     if (user.isFriend === "True") {
-      const friend = document.getElementById(`${user.id}`);
       friend.classList.add("friends");
     } else {
-      user.isFriend === "False";
       friend.classList.remove("friends");
     }
   }
