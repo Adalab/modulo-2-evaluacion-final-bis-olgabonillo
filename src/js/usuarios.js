@@ -1,12 +1,10 @@
 "use strict";
 
-//Creo el array vacío
 let users = [];
 const saveDataButton = document.querySelector(".js-save-data");
 const recoverDataButton = document.querySelector(".js-recover-data");
 const listUsers = document.querySelector(".js-list-users");
 
-//Creo el fetch para hacer la llamada al servidor
 fetch("https://randomuser.me/api/?results=10")
   .then(function (response) {
     return response.json();
